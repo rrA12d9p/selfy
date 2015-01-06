@@ -1,0 +1,11 @@
+<%= render 'form' %>
+
+<ul>
+<% @selfies.each do |selfy| %>
+	<li>
+		<%=selfy.body%>
+		<%=link_to 'edit', edit_selfy_path(selfy)%>
+		<%=link_to 'delete', selfy_path(selfy), method: 'delete' %>
+	</li>
+<%end%>
+</ul>
